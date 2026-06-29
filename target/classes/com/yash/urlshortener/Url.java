@@ -12,6 +12,10 @@ public class Url {
         // Default constructor for JPA
     }
 
+    public Url(String originalUrl) {
+        this.originalUrl = originalUrl;
+    }
+
     public Url(String originalUrl, String shortCode) {
         this.originalUrl = originalUrl;
         this.shortCode = shortCode;
