@@ -1,8 +1,18 @@
+package com.yash.urlshortener.service;
+
+import org.springframework.stereotype.Service;
+import com.yash.urlshortener.Url;
+import com.yash.urlshortener.repository.UrlRepository;
+import java.util.Optional;
+
 @Service
 public class UrlService {
 
-    @Autowired
-    private UrlRepository urlRepository;
+    private final UrlRepository urlRepository;
+
+    public UrlService(UrlRepository urlRepository) {
+        this.urlRepository = urlRepository;
+    }
 
 
 

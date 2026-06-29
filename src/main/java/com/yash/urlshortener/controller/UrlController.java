@@ -1,8 +1,20 @@
+package com.yash.urlshortener.controller;
+import com.yash.urlshortener.service.UrlService;
+
+import java.net.URI;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 @RestController
 public class UrlController {
 
-    @Autowired
-    private UrlService urlService;
+    private final UrlService urlService;
+
+    public UrlController(UrlService urlService) {
+        this.urlService = urlService;
+    }
 
     // POST /api/shorten
     @PostMapping("/api/shorten")
